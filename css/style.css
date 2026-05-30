@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        to bottom,
+        #6a1872,
+        #ffd6ec,
+        #fff0f7
+    );
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+/* ── HEADER ── */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.logo {
+    font-size: 38px;
+    margin-bottom: 6px;
+    color: white;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 4px;
+    text-shadow:
+        0 0 5px white,
+        0 0 15px #ff8fc7,
+        0 0 30px #ff69b4;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(181, 113, 212);
+    margin: 0 18px;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 6px 16px;
+}
+
+nav a:hover {
+    color: hotpink;
+    text-shadow: 0 0 12px hotpink;
+}
+
+/* ── CÍRCULO CARD ── */
+
+.hero-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding-top: 200px;
+    padding-bottom: 60px;
+    min-height: 520px;
+    background: transparent;
+}
+
+.heart-animation {
+    flex-shrink: 0;
+    margin-left: -60px;
+}
+
+/* ── BANNER ── */
+
+.banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: slide 18s infinite;
+}
+
+.slider img {
+    width: 33.333%;
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+@keyframes slide {
+    0%, 25%   { transform: translateX(0); }
+    33%, 58%  { transform: translateX(-33.333%); }
+    66%, 91%  { transform: translateX(-66.666%); }
+    100%      { transform: translateX(0); }
+}
+
+/* ── SEÇÕES ── */
+
+section {
+    padding: 60px;
+}
+
+section h2 {
+    margin-bottom: 20px;
+    color: #c0005a;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    text-shadow: 0 0 8px rgba(255, 105, 180, 0.4);
+}
+
+/* ── ÁLBUM CARDS ── */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-album {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 105, 180, 0.4);
+    padding: 40px;
+    border-radius: 15px;
+    color: #8b0057;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+    flex: 1;
+    min-width: 150px;
+    text-align: center;
+}
+
+.card-album:hover {
+    background: rgba(255, 105, 180, 0.25);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
+    transform: translateY(-4px);
+}
+
+/* ── REDES SOCIAIS ── */
+
+.icons {
+    font-size: 50px;
+}
+
+.icons a {
+    color: #d63384;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: hotpink;
+    text-shadow: 0 0 15px hotpink;
+}
+
+/* ── FOOTER ── */
+
+footer {
+    background: linear-gradient(135deg, #c0005a, #ff69b4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
